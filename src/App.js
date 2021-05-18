@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  foo = () => 'Bars';
   
   render() {
-    const name = "Rafa";
+
+    const loading = false;
+    const name = 'Rafa';
+    const showName = true;
+
     return (
 
     <div className="App">
-      <h1>Hello {this.foo()} from React, {name}</h1>
+      {loading ? <h4>Loading...</h4> : <h1>Hello {showName && name}</h1>}
     </div>
   );
   }
